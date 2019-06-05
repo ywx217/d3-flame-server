@@ -4,7 +4,6 @@
 
 A flame graph generator library based on d3-flame-graph, written in Golang
 
-
 ## Usage
 
 Input the flame graph data to the library, export show the flame graph in several
