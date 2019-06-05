@@ -26,9 +26,14 @@ func (r *Record) Add(stack []string, value int) {
 		child.Add(stack[1:], value)
 	} else {
 		child = NewRecord(stack[0], 0)
-		r.children[stack[0]] = child
+		r.AddChild(child)
 		child.Add(stack[1:], value)
 	}
+}
+
+// AddChild adds a child record
+func (r *Record) AddChild(child *Record) {
+	r.children[child.name] = child
 }
 
 // ReduceRoot returns the only child if len(children) == 1, otherwise the root itself
