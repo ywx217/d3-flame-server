@@ -48,7 +48,7 @@ const (
 	
 			/* Customize container */
 			.container {
-				max-width: 990px;
+				max-width: 1230px;
 			}
 			</style>
 	
@@ -95,7 +95,8 @@ const (
 	
 			<script type="text/javascript">
 			var flameGraph = d3.flamegraph()
-				.width(960)
+				.width(1200)
+				.height(800)
 				.cellHeight(18)
 				.transitionDuration(750)
 				.minFrameSize(5)
