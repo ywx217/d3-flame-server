@@ -45,3 +45,12 @@ func (r *Record) ReduceRoot() *Record {
 	}
 	return r
 }
+
+// FixRootValue sum up root value by children values
+func (r *Record) FixRootValue() *Record {
+	r.value = 0
+	for _, child := range r.children {
+		r.value += child.value
+	}
+	return r
+}
